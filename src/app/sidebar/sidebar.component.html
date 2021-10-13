@@ -1,0 +1,150 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer class="drawer" opened #drawer mode="side">
+    <div class="side-container">
+      <h5 class="heading">Patients</h5>
+      <div class="search-container">
+        <input placeholder="Search Patients" type="text">
+        <mat-icon>search</mat-icon>
+      </div>
+      <div class="patient-container" *ngFor="let patient of Patients" (click)="showInformation(patient)">
+        <div class="name-img">
+          <span>
+            <img [src]=patient.image alt="">
+          </span>
+          <div class="patient-details">
+            <h5>{{ patient.patientName }}</h5>
+            <h6> {{ patient.admissionDate }} </h6>
+          </div>
+        </div>
+        <span class="green"></span>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="main-content">
+      <div class="patient-information">
+        <h4>Patient Information</h4>
+        <div class="updated">
+          <h6>Last Updated {{ individual.lastUpdated }}</h6>
+          <mat-icon>more_horiz</mat-icon>
+        </div>
+      </div>
+      <h2 class="name-top">{{individual.patientName}}</h2>
+      <div class="details-container">
+        <div class="individual-img">
+          <img class="round-img" [src]= individual.image alt="">
+        </div>
+        <div class="individual-details">
+          <div class="detail">
+            <p>phone:</p>
+            <b>{{ individual.phone }}</b>
+          </div>
+          <div class="detail">
+            <p>Surgery Type:</p>
+            <b>{{ individual.surgeryType }}</b>
+          </div>
+          <div class="detail">
+            <p>Email:</p>
+            <b>{{ individual.email }}</b>
+          </div>
+          <div class="detail">
+            <p>Surgery Date:</p>
+            <b>{{ individual.surgeryDate }}</b>
+          </div>
+          <div class="detail">
+            <p>Gender:</p>
+            <b>{{ individual.gender }}</b>
+          </div>
+          <div class="detail">
+            <p>Height:</p>
+            <b>{{ individual.height }}</b>
+          </div>
+          <div class="detail">
+            <p>Age:</p>
+            <b>{{ individual.age }}</b>
+          </div>
+          <div class="detail">
+            <p>Weight:</p>
+            <b>{{ individual.weight }}</b>
+          </div>
+          <div class="detail">
+            <p>BMI:</p>
+            <b>{{ individual.BMI }}</b>
+          </div>
+        </div>
+        <div class="doctor-detail">
+          <div class="detail">
+            <p>Anesthesiologist</p>
+            <b>{{ individual.anesthesiologist }}</b>
+          </div>
+          <div class="detail">
+            <p>Anesthesiologist phone:</p>
+            <b>{{ individual.anesthesiologistPhone }}</b>
+          </div>
+          <div class="detail">
+            <p>Anesthesiologist Email:</p>
+            <b>{{ individual.anesthesiologistEmail }}</b>
+          </div>
+        </div>
+        <span class="spacer"></span>
+        <div class="surgery-details">
+          <div class="sd-cont">
+            <h4>Surgery Clearance</h4>
+            <div class="yes">Yes</div>
+          </div>
+        </div>
+      </div>
+      <div class="down-menu">
+          <p class="">List of prior Surgeries</p>
+          <p class="border-highlighted">List of Medical Diagnosis</p>
+          <p class="">List of Medications</p>
+          <p class="">Airway Evaluation</p>
+          <p class="">Anesthesia Clearance and Recomendations</p>
+      </div>
+      <div class="down-menu-items">
+        <div class="di">
+          <p class="down-menu-title" >First Time Surgery</p>
+          <p class="dia">No</p>
+        </div>
+        <div class="di">
+          <p class="down-menu-title" >Family History of Surgical Complications?</p>
+          <p class="dia">Yes</p>
+        </div>
+        <div class="di">
+          <p class="down-menu-title" >If Yes, please provide more details</p>
+          <p class="dia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolore quibusdam nesciunt inventore, similique soluta optio at in amet, voluptates laudantium consequatur ipsum? Corporis nemo quaerat suscipit fuga magni beatae sapiente, odio nisi quibusdam officia tempore, odit unde quisquam!</p>
+        </div>
+      </div>
+      <div class="previous-surgery">
+        <h4 class="ps">Previous Surgeries</h4>
+        <div class="ps-cont">
+          <div class="ps-details">
+            <p class="tabletitle">Surgery Type</p>
+            <p>Shoulder reconstruction</p>
+          </div>
+          <div class="ps-details">
+            <p class="tabletitle">Date</p>
+            <p>January 2008</p>
+          </div>
+          <div class="ps-details">
+            <p class="tabletitle">Anesthesia Type</p>
+            <p>'Genral "Breathing Tube"'</p>
+          </div>
+          <div class="ps-details">
+            <p class="tabletitle">Surgical Complications</p>
+            <p>No</p>
+          </div>
+          <div class="ps-details">
+            <p class="tabletitle">Anesthesia Complications(nausea, vomitting, difficult intubation)</p>
+            <p>No</p>
+          </div>
+          <div class="ps-details">
+            <p class="tabletitle">Actions</p>
+            <mat-icon>edit</mat-icon>
+            <mat-icon>delete</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

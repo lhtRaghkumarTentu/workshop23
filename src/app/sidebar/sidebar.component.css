@@ -1,0 +1,245 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+h1,h2,h3,h4,h6,h6 {
+    margin-bottom: 0;
+}
+
+mat-drawer-container{
+    height: 100%;
+}
+
+.drawer{
+    background: #e8f5fe;
+    color: black;
+    display: flex;
+}
+
+.heading{
+    margin: .5em 0;
+}
+
+.side-container{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: auto .5rem;
+}
+.side-container>*{
+    margin: .25em;
+}
+/*```````````````````````````` search container `````````````````````*/
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: .5em;
+}
+
+.search-container input{
+    border: none;
+    outline: none;
+}
+
+mat-icon{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+/* ````````````````` patient container ``````````````````````` */
+
+.patient-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border-radius: .25em;
+    width: 13rem;
+}
+
+.name-img{
+    display: flex;
+}
+
+.name-img span img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.patient-details>*{
+    margin: 0 .5em;
+}
+
+.green{
+    width: .5em;
+    height: .5em;
+    background: green;
+    border-radius: 50%;
+}
+
+.patient-container:hover{
+    background: #00a0f0;
+    color: white;
+}
+
+.toggler{
+    position: relative;
+    right: .5rem;
+    cursor: pointer;
+}
+
+.rotate{
+    rotate: 180deg;
+}
+
+.patient-information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5em;
+}
+
+.patient-information h6{
+    margin: 0 .25em;
+}
+
+.updated{
+    display: flex;
+    align-items: center;
+}
+
+
+/* ```````````````` details container `````````````````` */
+
+.main-content{
+    margin: .25em;
+    background-color: whitesmoke;
+}
+
+.details-container{
+    display: flex;
+    margin: auto .5rem;
+}
+
+.individual-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5rem;
+    margin: auto 3rem;
+}
+
+.individual-img{
+    margin-left: 1.5rem;
+}
+
+.individual-img img{
+    min-width: 5em;
+    max-width: 5em;
+    border-radius: 50%;
+}
+
+.name-top{
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+    font-size: 25px;
+}
+
+.detail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 17rem;
+}
+
+.detail>*{
+    margin-bottom: .5em;
+}
+
+
+.surgery-details{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+}
+
+.sd-cont{
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    left: 20%;
+}
+
+.yes{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: green;
+    color: white;
+    border-radius: 50%;
+    padding: .5em;
+}
+
+.down-menu{
+    display: flex;
+    margin-top: 2em;
+    width: 50%;
+    border: 1px solid grey;
+    border-bottom: none;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.down-menu>*{
+    margin: 0 1em;
+    max-width: 9.9em;
+}
+
+.down-menu-items{
+    margin-left: 1em;
+    max-width: 50em;
+    width: 30%;
+}
+
+.down-menu-title{
+    background: #e8f5fe;
+    padding: .25em;
+    margin-bottom: 3px;
+}
+
+.ps-cont{
+    display: flex;
+}
+.ps-cont>*{
+    margin: .25em 1em;
+}
+
+.previous-surgery{
+    margin-left: 1em;
+}
+
+.di{
+    margin-bottom: 10px;
+}
+
+.dia{
+    margin-left: 10px;
+    text-align: justify;
+}
+
+.ps{
+    color: grey;
+    margin-top: 25px;
+}
+
+.tabletitle{
+    background-color:  #e8f5fe;
+    margin-bottom: 3px;
+}
